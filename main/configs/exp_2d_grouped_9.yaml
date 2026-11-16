@@ -1,0 +1,30 @@
+task: "classification"
+input_representation: "2d_spectrogram"
+
+experiment_name: "grouped_9"
+class_mode: "grouped_9"
+
+base_path: "${BASE_PATH}"
+
+dataset:
+  variant: "A"
+  train_dir: "datasets/A/Train_grouped_9"
+  val_dir: "datasets/A/Val_grouped_9"
+  test_dir: "datasets/A/Test_grouped_9"
+  image_size: [128, 128]
+  batch_size: 32
+
+# C3 stack from best_model_C3.h5, with the 9-way head the grouped task requires.
+model:
+  type: "2d_grouped"
+  num_classes: 9
+  learning_rate: 0.0005
+
+training:
+  max_epochs: 33
+  patience: 10
+  save_best_model: true
+
+outputs:
+  models_dir: "models"
+  results_dir: "results"

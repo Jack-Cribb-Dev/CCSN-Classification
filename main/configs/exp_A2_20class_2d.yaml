@@ -1,0 +1,35 @@
+task: "classification"
+input_representation: "2d_spectrogram"
+
+experiment_name: "A2"
+class_mode: "20"
+
+base_path: "${BASE_PATH}"  # override via env var or edit locally
+
+# Dataset (expects pre-generated spectrogram PNG folders, or can be generated)
+dataset:
+  variant: "A"
+  train_dir: "datasets/A/Train_A2"
+  val_dir: "datasets/A/Val_A2"
+  test_dir: "datasets/A/Test_A2"
+  image_size: [128, 128]
+  batch_size: 32
+
+# Model. 2d_a1 is the reported 20-class network (best_model_A1.h5, lr 0.001).
+# 2d_a2 is the stack in FINALS/train_best_model.py.
+model:
+  type: "2d_a2"
+  num_classes: 20
+  learning_rate: 0.005
+
+# Training
+training:
+  max_epochs: 50
+  patience: 10
+  save_best_model: true
+
+# Outputs
+outputs:
+  models_dir: "models"
+  results_dir: "results"
+

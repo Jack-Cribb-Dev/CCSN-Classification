@@ -1,0 +1,24 @@
+experiment_name: "grouped_9_1d"
+base_path: "${BASE_PATH}"
+
+raw_root: "${RAW_ROOT}"
+
+class_mode: "grouped_9"
+
+dataset:
+  batch_size: 32
+
+model:
+  input_length: 16384
+  learning_rate: 0.005
+
+training:
+  max_epochs: 50
+  patience: 10
+
+# Counts from Dir_main/100k/1D_CNN/datasets/add.py. Length is 16384.
+noise_counts:
+  train: 2000
+  val: 600
+  test: 600
+noise_class_label: "noise"

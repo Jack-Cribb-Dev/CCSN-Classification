@@ -1,0 +1,21 @@
+base_path: "${BASE_PATH}"
+raw_root: "${RAW_ROOT}"
+
+dataset_variant: "A"
+experiment_name: "grouped_9"
+
+class_mode: "grouped_9"
+
+split_seed: 42
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+
+# Same per-split counts as noise_specs_add.py. Waveforms are 16384 samples.
+noise_counts:
+  train: 3000
+  val: 600
+  test: 600
+noise_class_label: "noise"
+
+spectrogram: {}

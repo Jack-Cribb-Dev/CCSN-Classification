@@ -1,0 +1,13 @@
+tensorflow
+numpy
+scipy
+pandas
+matplotlib
+seaborn
+scikit-learn
+pyyaml
+opencv-python
+pillow
+tqdm
+keras-tuner
+

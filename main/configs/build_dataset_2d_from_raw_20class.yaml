@@ -1,0 +1,22 @@
+base_path: "${BASE_PATH}"
+raw_root: "${RAW_ROOT}"
+
+dataset_variant: "A"
+experiment_name: "A2"
+
+class_mode: "20"  # "20" or "grouped_9"
+
+split_seed: 42
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+
+# Noise class counts from Dir_main/100k/2D_CNN/tuning/preprocessing/noise_specs_add.py.
+# Each noise waveform is 16384 samples (4 s at 4096 Hz).
+noise_counts:
+  train: 3000
+  val: 600
+  test: 600
+
+spectrogram: {}  # leave empty to use the paper-consistent defaults
+

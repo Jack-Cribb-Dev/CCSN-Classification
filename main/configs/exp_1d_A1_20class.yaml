@@ -1,0 +1,21 @@
+experiment_name: "A1_1d"
+base_path: "${BASE_PATH}"
+
+raw_root: "${RAW_ROOT}"  # directory containing mechanism folders with raw waveform .txt files
+
+class_mode: "20"  # "20" or "grouped_9"
+
+dataset:
+  batch_size: 32
+
+model:
+  input_length: 16384  # 4 s at 4096 Hz. Do not use the old 4096-sample snippet.
+  learning_rate: 0.001
+
+training:
+  max_epochs: 50
+  patience: 10
+
+noise_total: 0
+noise_class_label: "noise"
+
