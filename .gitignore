@@ -1,0 +1,268 @@
+# Git ignore file for CCSN Classification repository
+# Last updated: November 2026
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ============================================================================
+# JUPYTER NOTEBOOKS
+# ============================================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================================================
+# IDE / EDITOR
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Atom
+.atom/
+
+# ============================================================================
+# DATA & MODELS (DO NOT COMMIT)
+# ============================================================================
+
+# Raw waveform data
+data/raw/
+data/waveforms/
+*.h5
+*.hdf5
+*.npz
+*.pkl
+*.pickle
+
+# Processed/intermediate data
+data/processed/
+data/intermediate/
+datasets/
+
+# Model weights and checkpoints
+models/
+*.pt
+*.pth
+*.h5
+checkpoint*/
+*.weights
+*.ckpt
+
+# Results and outputs
+results/
+outputs/
+runs/
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ============================================================================
+# LARGE FILES
+# ============================================================================
+
+# Large simulation results
+*.tar
+*.tar.gz
+*.zip
+
+# CSV and data files (if > 10 MB)
+data/*.csv
+data/*.txt
+data/*.dat
+
+# ============================================================================
+# OS-SPECIFIC
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+
+# ============================================================================
+# PROJECT-SPECIFIC
+# ============================================================================
+
+# Training artifacts
+lightning_logs/
+wandb/
+mlruns/
+
+# Hyperparameter tuning
+tuning/
+optuna/
+ray_results/
+
+# SNR logs (generated, not versioned)
+snrs_logs/
+*_snrs*.txt
+
+# ============================================================================
+# ALLOWED EXCEPTIONS (Whitelist)
+# ============================================================================
+
+# Don't ignore these even though they match patterns above:
+!.gitkeep
+!.github/
+!docs/

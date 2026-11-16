@@ -1,0 +1,15 @@
+# Data directory - ignore all actual data files
+# This directory should contain waveforms, processed data, etc.
+# But these should NOT be committed to git
+
+# Ignore everything in this directory
+*
+# Except .gitignore itself
+!.gitignore
+# And README explaining data structure
+!README.md
+
+# Explicitly allow but note:
+# Raw waveforms (symlink or download)
+# Processed datasets
+# Model checkpoints
